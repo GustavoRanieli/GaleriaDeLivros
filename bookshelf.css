@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+body {
+background-repeat: no-repeat;
+background-size: 100%;
+padding: 10%;
+background-color: #0CA6ED;
+}
+
+.container {
+  margin: 0 auto;
+  width: 980px;
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.madeira {
+  border: 10px solid #8B4513;
+  z-index: 999999;
+  padding-bottom: 3px;
+  -webkit-box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.6); 
+  box-shadow: 0px -2px 15px 0px rgba(0,0,0,0.6);
+  background-image: url(./img/OIP.jpg);
+}
+
+:root {
+    --argyle: repeating-linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 60px
+      ),
+      repeating-linear-gradient(
+        60deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px,
+        transparent 60px
+      ),
+      linear-gradient(
+        60deg,
+        rgba(0, 0, 0, 0.1) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(0, 0, 0, 0.1) 75%,
+        rgba(0, 0, 0, 0.1)
+      ),
+      linear-gradient(
+        120deg,
+        rgba(0, 0, 0, 0.1) 25%,
+        transparent 25%,
+        transparent 75%,
+        rgba(0, 0, 0, 0.1) 75%,
+        rgba(0, 0, 0, 0.1)
+      );
+    background-size: 70px 120px;
+    --tartan: repeating-linear-gradient(
+        transparent,
+        transparent 50px,
+        rgba(0, 0, 0, 0.4) 50px,
+        rgba(0, 0, 0, 0.4) 53px,
+        transparent 53px,
+        transparent 63px,
+        rgba(0, 0, 0, 0.4) 63px,
+        rgba(0, 0, 0, 0.4) 66px,
+        transparent 66px,
+        transparent 116px,
+        rgba(0, 0, 0, 0.5) 116px,
+        rgba(0, 0, 0, 0.5) 166px,
+        rgba(255, 255, 255, 0.2) 166px,
+        rgba(255, 255, 255, 0.2) 169px,
+        rgba(0, 0, 0, 0.5) 169px,
+        rgba(0, 0, 0, 0.5) 179px,
+        rgba(255, 255, 255, 0.2) 179px,
+        rgba(255, 255, 255, 0.2) 182px,
+        rgba(0, 0, 0, 0.5) 182px,
+        rgba(0, 0, 0, 0.5) 232px,
+        transparent 232px
+      ),
+      repeating-linear-gradient(
+        270deg,
+        transparent,
+        transparent 50px,
+        rgba(0, 0, 0, 0.4) 50px,
+        rgba(0, 0, 0, 0.4) 53px,
+        transparent 53px,
+        transparent 63px,
+        rgba(0, 0, 0, 0.4) 63px,
+        rgba(0, 0, 0, 0.4) 66px,
+        transparent 66px,
+        transparent 116px,
+        rgba(0, 0, 0, 0.5) 116px,
+        rgba(0, 0, 0, 0.5) 166px,
+        rgba(255, 255, 255, 0.2) 166px,
+        rgba(255, 255, 255, 0.2) 169px,
+        rgba(0, 0, 0, 0.5) 169px,
+        rgba(0, 0, 0, 0.5) 179px,
+        rgba(255, 255, 255, 0.2) 179px,
+        rgba(255, 255, 255, 0.2) 182px,
+        rgba(0, 0, 0, 0.5) 182px,
+        rgba(0, 0, 0, 0.5) 232px,
+        transparent 232px
+      ),
+      repeating-linear-gradient(
+        125deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.2) 2px,
+        rgba(0, 0, 0, 0.2) 3px,
+        transparent 3px,
+        transparent 5px,
+        rgba(0, 0, 0, 0.2) 5px
+      );
+  }
+  
+  .bookshelf {
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .book {
+    width: 50px;
+    height: 280px;
+    position: relative;
+    margin-left: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(0) rotateY(0);
+    transition: transform 1s;
+  }
+  
+  .side {
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 3px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    transform-origin: center left;
+  }
+  
+  .spine {
+    position: relative;
+    width: 50px;
+    height: 280px;
+    /* Patterns from: https://projects.verou.me/css3patterns/ */
+    background-image: var(--tartan);
+    transform: rotateY(0deg) translateZ(0px);
+    background-color: hsl(2, 57%, 40%);
+  }
+  
+  .spine-title {
+    margin: 2px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    font-size: 12px;
+    color: gold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+  
+  .spine-author {
+    position: absolute;
+    color: goldenrod;
+    bottom: 0px;
+    left: 20%; /* no idea why 20% centers it */
+  }
+  
+  .top {
+    width: 50px;
+    height: 190px;
+    top: -2px;  /* hmm, why -2 and not 0? */
+    background-image: linear-gradient(90deg, white 90%, gray 10%);
+    background-size: 5px 5px;
+    transform: rotateX(90deg) translateZ(95px) translateY(-95px);
+  }
+  
+  .capa1 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url("./img/519kRFUvDOL.jpg");
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+
+  .capa2 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url("./img/D_NQ_NP_936728-MLB27830055598_072018-O.jpg");
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+
+  .capa3 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url("./img/51FJcK47cOL.jpg");
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+
+  .capa4 {
+    width: 190px;
+    height: 280px;
+    top: 0px;
+    background-image: url("./img/81WKPIFKThL.jpg");
+    background-size: contain;
+    background-repeat: round;
+    left: 50px;
+    transform: rotateY(90deg) translateZ(0);
+    transition: transform 1s;
+  }
+  
+  .book:hover {
+    z-index: 1;
+    transform: rotateX(-25deg) rotateY(-40deg) rotateZ(-15deg) translateY(50px)
+      translateX(-30px);
+  }
+  
